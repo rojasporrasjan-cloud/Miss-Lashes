@@ -417,13 +417,22 @@ body::before {
     text-align: center;
   }
 
+  .hero__inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 30px;
+  }
+
   .hero__left {
-    order: 2;
+    order: 1;
+    /* Content first on mobile */
   }
 
   .hero__right {
-    order: 1;
-    max-width: 400px;
+    order: 2;
+    /* Image second on mobile */
+    max-width: 320px;
+    /* Smaller image to save space */
     margin: 0 auto;
   }
 

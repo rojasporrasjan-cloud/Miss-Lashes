@@ -44,10 +44,14 @@ export async function initTryOn() {
     };
 
     const lashStyles = {
-        natural: { density: 45, fiberLength: 0.1, thickness: 0.8, opacity: 0.75, params: { centerScale: 1.1, flareScale: 1.2 } },
-        softglam: { density: 75, fiberLength: 0.18, thickness: 1.0, opacity: 0.84, params: { centerScale: 1.2, flareScale: 1.6 } },
-        wispy: { density: 60, fiberLength: 0.22, thickness: 0.9, opacity: 0.80, params: { spikes: true, randomLength: true, flareScale: 1.5 } },
-        dolleye: { density: 85, fiberLength: 0.25, thickness: 1.1, opacity: 0.88, params: { centerScale: 1.8, flareScale: 1.1 } }
+        natural: { density: 45, fiberLength: 0.11, thickness: 0.8, opacity: 0.75, params: { centerScale: 1.1, flareScale: 1.2 } },
+        softglam: { density: 75, fiberLength: 0.20, thickness: 1.0, opacity: 0.84, params: { centerScale: 1.2, flareScale: 1.6 } },
+        wispy: { density: 60, fiberLength: 0.24, thickness: 0.9, opacity: 0.80, params: { spikes: true, randomLength: true, flareScale: 1.5 } },
+        dolleye: { density: 85, fiberLength: 0.26, thickness: 1.1, opacity: 0.88, params: { centerScale: 1.8, flareScale: 1.1 } },
+        cateye: { density: 80, fiberLength: 0.22, thickness: 1.0, opacity: 0.85, params: { centerScale: 0.9, flareScale: 2.2 } },
+        hybrid: { density: 70, fiberLength: 0.23, thickness: 1.2, opacity: 0.85, params: { spikes: true, centerScale: 1.2 } },
+        foxeye: { density: 85, fiberLength: 0.21, thickness: 1.0, opacity: 0.88, params: { centerScale: 0.8, flareScale: 2.6 } },
+        megavolume: { density: 100, fiberLength: 0.28, thickness: 1.3, opacity: 0.92, params: { centerScale: 1.3, flareScale: 1.5 } }
     };
 
     const ctx = canvas.getContext("2d");
@@ -268,8 +272,11 @@ export async function initTryOn() {
         const pts = indices.map(i => ({ x: landmarks[i].x * w, y: landmarks[i].y * h }));
         const density = style.density;
 
+        // V6.1 Mobile Scaling Boost
+        // If width is small (cellphone), we boost lengths so they aren't 'tiny'
+        const scaleBoost = w < 800 ? 1.35 : 1.0;
         const eyeWidth = Math.sqrt(Math.pow(pts[pts.length - 1].x - pts[0].x, 2) + Math.pow(pts[pts.length - 1].y - pts[0].y, 2));
-        const baseLen = eyeWidth * style.fiberLength * Math.max(0.1, normOpen);
+        const baseLen = eyeWidth * style.fiberLength * Math.max(0.1, normOpen) * scaleBoost;
 
         for (let i = 0; i < density; i++) {
             const t = i / (density - 1);

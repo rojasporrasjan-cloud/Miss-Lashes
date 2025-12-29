@@ -2,7 +2,7 @@ import { initReveals, initPageLoad, initParallax, initSmartNavbar, initSmoothScr
 import { initParticles } from "./particles.js";
 import { initQuiz } from "./quiz.js";
 import { initBeforeAfter } from "./slider.js";
-import { initTryOn } from "./tryon.js?v=6.0";
+import { initTryOn } from "./tryon.js?v=6.1";
 import { initBooking } from "./booking.js";
 
 // Initialize Navbar Glow Effect
