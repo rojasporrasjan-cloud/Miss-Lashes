@@ -78,7 +78,9 @@ function goToStep(stepIndex) {
 }
 
 function initStyleSelection() {
-    document.querySelectorAll('.style-card').forEach(card => {
+    const cards = document.querySelectorAll('.style-card');
+    if (cards.length === 0) return;
+    cards.forEach(card => {
         card.addEventListener('click', () => {
             document.querySelectorAll('.style-card').forEach(c => c.classList.remove('is-selected'));
             card.classList.add('is-selected');
@@ -153,14 +155,21 @@ function renderCalendar() {
 }
 
 function initCalendarNav() {
-    document.querySelector('.calendar__nav .prev').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() - 1);
-        renderCalendar();
-    });
-    document.querySelector('.calendar__nav .next').addEventListener('click', () => {
-        currentDate.setMonth(currentDate.getMonth() + 1);
-        renderCalendar();
-    });
+    const prevBtn = document.querySelector('.calendar__nav .prev');
+    const nextBtn = document.querySelector('.calendar__nav .next');
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() - 1);
+            renderCalendar();
+        });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            currentDate.setMonth(currentDate.getMonth() + 1);
+            renderCalendar();
+        });
+    }
 }
 
 async function renderTimeSlots(date) {
