@@ -424,6 +424,8 @@ body::before {
 
   .hero__left {
     order: -1;
+    margin-bottom: 20px;
+    /* Space between buttons and image */
   }
 
   .hero__right {
