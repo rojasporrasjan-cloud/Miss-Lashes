@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Reserva tu Ritual | MISS LASHES by Fernanda</title>
+    <meta name="description"
+        content="Reserva tu cita para una mirada inolvidable. Un ritual de belleza diseñado para ti." />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="css/styles.css?v=1.2" />
+    <link rel="stylesheet" href="css/booking.css?v=1.2" />
+</head>
+
+<body class="page-booking">
+    <div class="ritual-bg"></div>
+
+    <!-- Background Flourishes -->
+    <div class="ritual-flourish ritual-flourish--1">
+        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M10 30C30 30 50 10 90 10" stroke="var(--rose-gold)" stroke-width="0.5" stroke-linecap="round"
+                opacity="0.2" />
+        </svg>
+    </div>
+    <div class="ritual-flourish ritual-flourish--2">
+        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M90 30C70 30 50 10 10 10" stroke="var(--rose-gold)" stroke-width="0.5" stroke-linecap="round"
+                opacity="0.2" />
+        </svg>
+    </div>
+
+    <!-- Minimalist Header -->
+    <header class="ritual-nav">
+        <div class="container ritual-nav__inner">
+            <a href="index.html" class="ritual-nav__back">
+                <span class="icon">&larr;</span>
+                <span class="text">Volver al Inicio</span>
+            </a>
+            <a href="index.html" class="ritual-nav__logo">
+                <div class="logo-text">MISS LASHES</div>
+                <div class="logo-sub">by Fernanda</div>
+            </a>
+            <div class="ritual-nav__spacer"></div>
+        </div>
+    </header>
+
+    <main class="booking-ritual">
+        <!-- Progress Indicator -->
+        <div class="ritual-progress">
+            <div class="progress-step is-active" data-step="0"></div>
+            <div class="progress-step" data-step="1"></div>
+            <div class="progress-step" data-step="2"></div>
+            <div class="progress-step" data-step="3"></div>
+        </div>
+
+        <!-- PASO 1: ELEGIR ESTILO -->
+        <section class="ritual-step is-active" id="step-style">
+            <div class="ritual-header">
+                <h1>Elige c&oacute;mo quieres verte &#10024;</h1>
+                <p>Cada mirada es &uacute;nica. Empecemos por el estilo que mejor te representa.</p>
+            </div>
+            <div class="style-grid">
+                <div class="style-card" data-service="Natural">
+                    <h3>Natural</h3>
+                    <p>Sutil, delicado y elegante. Ideal si buscas realzar tu mirada de forma natural, como si las
+                        pesta&ntilde;as nacieran as&iacute;.</p>
+                </div>
+                <div class="style-card" data-service="Soft Glam">
+                    <h3>Soft Glam</h3>
+                    <p>Un balance perfecto entre naturalidad y volumen. Aporta definici&oacute;n y feminidad sin verse
+                        exagerado.</p>
+                </div>
+                <div class="style-card" data-service="Wispy">
+                    <h3>Wispy</h3>
+                    <p>Textura ligera con efecto definido y moderno. Perfecto para una mirada suave pero con
+                        personalidad.</p>
+                </div>
+                <div class="style-card" data-service="Doll Eye">
+                    <h3>Doll Eye</h3>
+                    <p>Dise&ntilde;o que abre y resalta la mirada, creando un efecto femenino y expresivo.</p>
+                </div>
+            </div>
+
+            <div class="ritual-note"
+                style="text-align: center; margin-top: 40px; padding: 20px; border-top: 1px solid rgba(217, 178, 124, 0.1); max-width: 600px; margin-left: auto; margin-right: auto;">
+                <p style="font-style: italic; color: var(--rose-gold); font-size: 15px; line-height: 1.6;">
+                    &ldquo;Cada estilo es personalizado seg&uacute;n tu tipo de pesta&ntilde;as naturales. Fernanda
+                    adaptar&aacute; la t&eacute;cnica ideal (cl&aacute;sica, h&iacute;brida o volumen) para lograr el
+                    mejor resultado en ti.&rdquo;
+                </p>
+            </div>
+        </section>
+
+        <!-- PASO 2: ELEGIR FECHA -->
+        <section class="ritual-step" id="step-date">
+            <div class="ritual-header">
+                <h2>&iquest;Qu&eacute; d&iacute;a te gustar&iacute;a consentirte? &#128149;</h2>
+                <p>Elige con calma el momento perfecto para tu cita.</p>
+            </div>
+            <div class="ritual-calendar">
+                <div class="calendar__header">
+                    <div class="calendar__month"></div>
+                    <div class="calendar__nav">
+                        <button class="prev">&larr;</button>
+                        <button class="next">&rarr;</button>
+                    </div>
+                </div>
+                <div class="calendar__grid"></div>
+            </div>
+            <div style="text-align: center; margin-top: 30px;">
+                <button class="btn-back"
+                    style="background: none; border: none; color: var(--rose-gold); cursor: pointer; text-decoration: underline;">&larr;
+                    Volver a estilos</button>
+            </div>
+        </section>
+
+        <!-- PASO 3: ELEGIR HORA -->
+        <section class="ritual-step" id="step-time">
+            <div class="ritual-header">
+                <h2>Horarios disponibles para ti &#10024;</h2>
+                <p>Cada cita es preparada con dedicaci&oacute;n y detalle.</p>
+            </div>
+            <div class="time-grid" id="timeslots">
+                <!-- Timeslots will be injected here -->
+            </div>
+            <div style="text-align: center; margin-top: 40px;">
+                <button class="btn-back"
+                    style="background: none; border: none; color: var(--rose-gold); cursor: pointer; text-decoration: underline;">&larr;
+                    Cambiar fecha</button>
+            </div>
+        </section>
+
+        <!-- PASO 4: CONFIRMACI&Oacute;N -->
+        <section class="ritual-step" id="step-confirm">
+            <div class="ritual-header">
+                <h2>Tu cita est&aacute; casi lista &#10024;</h2>
+            </div>
+            <div class="ritual-summary">
+                <div class="summary-item">
+                    <div class="summary-label">Estilo</div>
+                    <div class="summary-value" id="summary-style">-</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Fecha y Hora</div>
+                    <div class="summary-value" id="summary-datetime">-</div>
+                </div>
+                <div class="summary-item">
+                    <div class="summary-label">Duraci&oacute;n Estimada</div>
+                    <div class="summary-value">Entre 1 hora 45 minutos y 2 horas</div>
+                </div>
+
+                <p class="ritual-message">&ldquo;Estamos listas para realzar tu mirada con delicadeza y amor.&rdquo;</p>
+
+                <button id="confirmBooking" class="btn-ritual">Confirmar y enviar por WhatsApp</button>
+                <br>
+                <button class="btn-back"
+                    style="background: none; border: none; color: var(--rose-gold); cursor: pointer; text-decoration: underline; margin-top: 20px;">Modificar
+                    detalles</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer simple -->
+    <footer
+        style="text-align: center; padding: 40px; color: var(--text-muted); font-size: 14px; position: relative; z-index: 2;">
+        MISS LASHES by Fernanda &bull; Ritual de Belleza
+    </footer>
+
+    <script type="module" src="js/booking.js?v=1.2"></script>
+</body>
+
+</html>

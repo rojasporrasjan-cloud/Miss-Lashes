@@ -1,0 +1,260 @@
+/* Virtual Try-On Styles */
+.tryon {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.is-hidden {
+    display: none !important;
+}
+
+.tryon__container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4/3;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+#tryonVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    /* Mirror effect */
+}
+
+#tryonCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1);
+    /* Mirror effect */
+    z-index: 2;
+}
+
+.tryon__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: rgba(26, 13, 18, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 10;
+    transition: opacity 0.5s ease;
+}
+
+.tryon__privacy {
+    font-size: 12px;
+    color: var(--text-muted);
+    max-width: 250px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Loader */
+.tryon__loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    background: rgba(26, 13, 18, 0.9);
+    z-index: 15;
+    color: var(--blush);
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(232, 180, 184, 0.1);
+    border-top-color: var(--blush);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Messages */
+.tryon__message {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(183, 110, 121, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-size: 14px;
+    color: white;
+    z-index: 20;
+    pointer-events: none;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Face Guide */
+.tryon__guide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 5;
+    pointer-events: none;
+    display: none;
+    /* Hidden until camera starts */
+    flex-direction: column;
+    align-items: center;
+    transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.tryon__guide-oval {
+    width: 200px;
+    height: 280px;
+    border: 1px dashed rgba(232, 180, 184, 0.35);
+    /* Thinner and softer */
+    border-radius: 50% 50% 45% 45%;
+    margin-bottom: 20px;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.tryon__guide-text {
+    font-size: 14px;
+    color: var(--blush);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background: rgba(26, 13, 18, 0.6);
+    padding: 4px 12px;
+    border-radius: 20px;
+}
+
+.tryon__guide.is-centered .tryon__guide-oval {
+    border-style: solid;
+    border-color: var(--blush);
+    box-shadow: 0 0 40px rgba(232, 180, 184, 0.25);
+    border-width: 2px;
+}
+
+.tryon__guide.is-centered .tryon__guide-text {
+    background: var(--blush);
+    color: var(--plum-dark);
+}
+
+.tryon__controls {
+    margin-top: 25px;
+    text-align: center;
+}
+
+.tryon__styles {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.tryon__style {
+    padding: 10px 20px;
+    border-radius: 50px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--text-cream);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.tryon__style:hover {
+    background: rgba(232, 180, 184, 0.1);
+    border-color: var(--blush);
+}
+
+.tryon__style.is-active {
+    background: var(--active-gradient);
+    color: var(--white);
+    border-color: var(--blush);
+    transform: scale(1.08);
+    /* Slightly more prominent */
+    box-shadow: var(--shadow-sm), 0 0 15px rgba(232, 180, 184, 0.3);
+}
+
+/* Photo Preview Styles */
+.tryon__preview {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 25;
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#tryonPreviewImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.tryon__preview-actions {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 0 20px;
+}
+
+.tryon__preview-actions .btn {
+    min-width: 140px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .tryon__container {
+        aspect-ratio: 3/4;
+    }
+
+    .tryon__style {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+}

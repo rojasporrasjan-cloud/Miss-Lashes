@@ -1,0 +1,13 @@
+{
+    "name": "miss-lashes",
+    "version": "1.0.0",
+    "description": "Premium Lash Designer Website",
+    "main": "index.html",
+    "scripts": {
+        "start": "npx http-server -p 8001 -o"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "http-server": "^14.1.1"
+    }
+}

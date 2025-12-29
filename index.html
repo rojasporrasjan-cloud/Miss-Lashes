@@ -1,0 +1,386 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MISS LASHES by Fernanda | Pestañas de Lujo</title>
+  <meta name="description"
+    content="Pestañas de lujo por Fernanda. Sets personalizados diseñados para tu forma de ojos — suaves, glamorosas y duraderas." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="alternate icon" href="favicon.svg">
+
+  <!-- Google Fonts: Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MISS LASHES by Fernanda" />
+  <meta property="og:description" content="Pestañas de lujo. Confianza sin esfuerzo." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preload hero image for LCP -->
+  <link rel="preload" as="image" href="assets/img/hero.webp" imagesrcset="assets/img/hero.webp" />
+
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/tryon.css" />
+</head>
+
+<body>
+  <!-- Subtle particles layer -->
+  <canvas id="particles" aria-hidden="true"></canvas>
+
+  <!-- Sticky header: Lash Island 2.0 -->
+  <header class="header">
+    <div class="header__island">
+      <div class="header__glow"></div>
+      <div class="header__progress"></div>
+
+      <!-- Left Lash Flourish -->
+      <div class="header__lash header__lash--left">
+        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 30C30 30 50 10 90 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M20 25C35 25 45 15 70 15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+            opacity="0.6" />
+          <path d="M30 20C40 20 45 18 55 18" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"
+            opacity="0.4" />
+        </svg>
+      </div>
+
+      <!-- Left Nav -->
+      <nav class="nav nav--left" aria-label="Navegación izquierda">
+        <a href="#looks" class="nav__link">Estilos</a>
+        <a href="#tryon" class="nav__link">Prueba Virtual</a>
+      </nav>
+
+      <!-- Centered Logo -->
+      <a class="header__logo" href="#top" aria-label="Miss Lashes home">
+        <div class="header__logo-text">MISS LASHES</div>
+        <div class="header__logo-sub">by Fernanda</div>
+      </a>
+
+      <!-- Right Nav -->
+      <nav class="nav nav--right" aria-label="Navegación derecha">
+        <a href="#quiz" class="nav__link">Quiz</a>
+        <a href="#pricing" class="nav__link">Precios</a>
+        <a class="btn btn--primary btn--header" href="ritual.html">Reservar</a>
+      </nav>
+
+      <!-- Mobile Menu Toggle -->
+      <button class="nav__toggle" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Right Lash Flourish -->
+      <div class="header__lash header__lash--right">
+        <svg viewBox="0 0 100 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M90 30C70 30 50 10 10 10" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+          <path d="M80 25C65 25 55 15 30 15" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+            opacity="0.6" />
+          <path d="M70 20C60 20 55 18 45 18" stroke="currentColor" stroke-width="0.5" stroke-linecap="round"
+            opacity="0.4" />
+        </svg>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="nav__overlay">
+      <nav class="nav__mobile">
+        <a href="#looks" class="nav__mobile-link">Estilos</a>
+        <a href="#tryon" class="nav__mobile-link">Prueba Virtual</a>
+        <a href="#quiz" class="nav__mobile-link">Quiz</a>
+        <a href="#pricing" class="nav__mobile-link">Precios</a>
+        <a href="ritual.html" class="nav__mobile-link nav__mobile-link--cta">Reservar Cita</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__bg"></div>
+
+      <div class="container hero__inner">
+        <div class="hero__left">
+          <div class="logo">
+            <div class="logo__title">MISS LASHES</div>
+            <div class="logo__subtitle">
+              <span>by Fernanda</span>
+              <span class="logo__flourish" aria-hidden="true"></span>
+            </div>
+          </div>
+
+          <div class="text-mask reveal">
+            <h1 class="h1 reveal-text">Pestañas de Lujo.<br />Confianza Sin Esfuerzo.</h1>
+          </div>
+          <p class="lead reveal">
+            Sets personalizados diseñados para la forma de tus ojos — suaves, glamorosas y duraderas.
+          </p>
+
+          <div class="hero__cta reveal">
+            <a class="btn btn--primary" href="ritual.html">Reservar Ahora</a>
+            <a class="btn btn--ghost" href="#tryon">Prueba Virtual</a>
+          </div>
+        </div>
+
+        <div class="hero__right">
+          <div class="hero__imageWrap parallax">
+            <img class="hero__image" src="assets/img/hero.webp" alt="Retrato editorial de pestañas de lujo" />
+            <div class="hero__shine" aria-hidden="true"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SIGNATURE LOOKS -->
+    <section id="looks" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="text-mask">
+            <h2 class="h2 reveal-text">Estilos Signature</h2>
+          </div>
+          <p class="muted">Elige c&oacute;mo quieres verte. Resultados personalizados para tu mirada.</p>
+        </div>
+
+        <div class="grid looks reveal-group">
+          <article class="card card--glass reveal reveal--left" style="--i: 1">
+            <img src="assets/img/look-natural.webp" alt="Natural" loading="lazy" />
+            <div class="card__body">
+              <h3>Natural</h3>
+              <p class="card__desc">Sutil, delicado y elegante.</p>
+              <a class="btn btn--tiny" href="ritual.html?service=Natural">Reservar</a>
+            </div>
+          </article>
+
+          <article class="card card--glass reveal reveal--left" style="--i: 2">
+            <img src="assets/img/look-softglam.webp" alt="Soft Glam" loading="lazy" />
+            <div class="card__body">
+              <h3>Soft Glam</h3>
+              <p class="card__desc">Balance perfecto y definici&oacute;n.</p>
+              <a class="btn btn--tiny" href="ritual.html?service=Soft+Glam">Reservar</a>
+            </div>
+          </article>
+
+          <article class="card card--glass reveal reveal--right" style="--i: 3">
+            <img src="assets/img/look-wispy.webp" alt="Wispy" loading="lazy" />
+            <div class="card__body">
+              <h3>Wispy</h3>
+              <p class="card__desc">Textura ligera y moderna.</p>
+              <a class="btn btn--tiny" href="ritual.html?service=Wispy">Reservar</a>
+            </div>
+          </article>
+
+          <article class="card card--glass reveal reveal--right" style="--i: 4">
+            <img src="assets/img/look-dolleye.webp" alt="Doll Eye" loading="lazy" />
+            <div class="card__body">
+              <h3>Doll Eye</h3>
+              <p class="card__desc">Mirada abierta y femenina.</p>
+              <a class="btn btn--tiny" href="ritual.html?service=Doll+Eye">Reservar</a>
+            </div>
+          </article>
+        </div>
+
+        <div class="reveal" style="text-align: center; margin-top: 40px;">
+          <p class="muted" style="font-style: italic;">&ldquo;Cada estilo es personalizado seg&uacute;n tus
+            pesta&ntilde;as naturales.&rdquo;</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRUEBA VIRTUAL -->
+    <section id="tryon" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="text-mask">
+            <h2 class="h2 reveal-text">Prueba Virtual</h2>
+          </div>
+          <p class="muted">Usa tu cámara para ver cómo te quedarían nuestros estilos de pestañas.</p>
+        </div>
+
+        <div class="tryon card card--glass reveal reveal--zoom">
+          <div class="tryon__container">
+            <video id="tryonVideo" autoplay playsinline muted></video>
+            <canvas id="tryonCanvas"></canvas>
+
+            <!-- Face Guide Overlay -->
+            <div class="tryon__guide" id="tryonGuide">
+              <div class="tryon__guide-oval"></div>
+              <p class="tryon__guide-text">Centra tu rostro aqu&iacute;</p>
+            </div>
+
+            <!-- Loader -->
+            <div class="tryon__loader" id="tryonLoader">
+              <div class="spinner"></div>
+              <p>Cargando experiencia...</p>
+            </div>
+
+            <!-- Face Detection Message -->
+            <div class="tryon__message is-hidden" id="tryonMessage">
+              <p>Ac&eacute;rcate un poco a la c&aacute;mara ✨</p>
+            </div>
+
+            <div class="tryon__overlay" id="tryonOverlay">
+              <button id="tryonStart" class="btn btn--primary">Activar C&aacute;mara</button>
+              <p class="tryon__privacy">La c&aacute;mara se usa solo en tu dispositivo. No guardamos video.</p>
+            </div>
+
+            <!-- Photo Preview (Frozen State) -->
+            <div class="tryon__preview is-hidden" id="tryonPreview">
+              <img id="tryonPreviewImg" src="" alt="Vista previa de tu foto">
+              <div class="tryon__preview-actions">
+                <button id="tryonRetake" class="btn btn--ghost">📸 Nueva Foto</button>
+                <button id="tryonDownload" class="btn btn--primary">⬇️ Descargar</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tryon__controls">
+            <p class="muted" style="margin-bottom: 12px;">Selecciona un estilo:</p>
+            <div class="tryon__styles">
+              <button class="tryon__style is-active" data-style="natural">Natural</button>
+              <button class="tryon__style" data-style="softglam">Soft Glam</button>
+              <button class="tryon__style" data-style="wispy">Wispy</button>
+              <button class="tryon__style" data-style="dolleye">Doll Eye</button>
+              <button class="tryon__style" data-style="cateye">Cat Eye</button>
+              <button class="tryon__style" data-style="hybrid">Hybrid</button>
+              <button class="tryon__style" data-style="foxeye">Fox Eye</button>
+              <button class="tryon__style" data-style="megavolume">Mega Volume</button>
+            </div>
+            <button id="tryonCapture" class="btn btn--ghost" style="margin-top: 12px;" disabled>📸 Capturar
+              Foto</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section id="quiz" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="text-mask">
+            <h2 class="h2 reveal-text">Tu Estilo Perfecto</h2>
+          </div>
+          <p class="muted">Responde 5 preguntas rápidas para revelar tu look signature by Fernanda.</p>
+        </div>
+
+        <div class="quiz card card--glass reveal">
+          <div class="quiz__top">
+            <span class="pill">Paso <span id="quizStep">1</span> de 5</span>
+            <span class="pill pill--subtle">Miss Lashes • ML</span>
+          </div>
+
+          <h3 id="quizQuestion" class="quiz__q">¿Cuál es tu vibra?</h3>
+          <div id="quizOptions" class="quiz__options"></div>
+
+          <div class="quiz__bottom">
+            <button id="quizBack" class="btn btn--ghost" type="button">Atrás</button>
+            <button id="quizNext" class="btn btn--primary" type="button">Siguiente</button>
+          </div>
+        </div>
+
+        <div id="quizResult" class="quizResult card card--glass" hidden>
+          <h3>Tu look signature by Fernanda</h3>
+          <p class="muted" id="quizResultText"></p>
+          <a class="btn btn--primary" href="ritual.html">Reservar este look</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANTES/DESPUÉS -->
+    <section id="before-after" class="section">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="text-mask">
+            <h2 class="h2 reveal-text">Transformación</h2>
+          </div>
+          <p class="muted">Arrastra para revelar la diferencia.</p>
+        </div>
+
+        <div class="ba card card--glass reveal reveal--zoom" role="group" aria-label="Deslizador de antes y después">
+          <div class="ba__wrap" id="baWrap">
+            <img class="ba__img" src="assets/img/before.webp" alt="Antes" loading="lazy" />
+            <div class="ba__after" id="baAfter">
+              <img class="ba__img" src="assets/img/after.webp" alt="Después" loading="lazy" />
+            </div>
+            <div class="ba__handle" id="baHandle" aria-hidden="true"></div>
+            <div class="ba__labels" aria-hidden="true">
+              <span>ANTES</span><span>DESPUÉS</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRECIOS -->
+    <section id="pricing" class="section section--alt">
+      <div class="container">
+        <div class="section__head reveal">
+          <div class="text-mask">
+            <h2 class="h2 reveal-text">Rituales de Belleza</h2>
+          </div>
+          <p class="muted">Experiencias personalizadas para realzar tu mirada.</p>
+        </div>
+
+        <div class="grid pricing reveal-group">
+          <article class="price card card--glass reveal" style="--i: 1">
+            <h3>Ritual Signature</h3>
+            <p class="muted">Set completo personalizado.</p>
+            <ul>
+              <li>Duraci&oacute;n: 1h 45m &ndash; 2h</li>
+              <li>T&eacute;cnica: Adaptada a tus pesta&ntilde;as</li>
+              <li>Incluye: Asesor&iacute;a de dise&ntilde;o</li>
+            </ul>
+            <a class="btn btn--primary" href="ritual.html">Reservar Ritual</a>
+          </article>
+
+          <article class="price card card--glass reveal" style="--i: 2">
+            <h3>Ritual de Retoque</h3>
+            <p class="muted">Mantenimiento de tu mirada.</p>
+            <ul>
+              <li>Duraci&oacute;n: 60 &ndash; 90 min</li>
+              <li>Recomendado: cada 2&ndash;3 semanas</li>
+              <li>Ideal para: mantener la perfecci&oacute;n</li>
+            </ul>
+            <a class="btn btn--primary" href="ritual.html">Reservar Retoque</a>
+          </article>
+
+          <article class="price card card--glass reveal" style="--i: 3">
+            <h3>Ritual de Remoci&oacute;n</h3>
+            <p class="muted">Cuidado y descanso profesional.</p>
+            <ul>
+              <li>Duraci&oacute;n: 30 min</li>
+              <li>Proceso: Delicado y seguro</li>
+              <li>Ideal para: renovar tus pesta&ntilde;as</li>
+            </ul>
+            <a class="btn btn--primary" href="ritual.html">Reservar Remoci&oacute;n</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container footer__inner">
+        <div class="logo logo--small">
+          <div class="logo__title">MISS LASHES</div>
+          <div class="logo__subtitle"><span>by Fernanda</span></div>
+        </div>
+        <p class="muted">© <span id="year"></span> Miss Lashes by Fernanda. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Floating CTA (mobile) -->
+    <a class="fab" href="ritual.html" aria-label="Reservar ahora">Reservar</a>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+
+</html>
