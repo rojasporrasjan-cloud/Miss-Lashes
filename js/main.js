@@ -3,7 +3,7 @@ import { initParticles } from "./particles.js";
 import { initQuiz } from "./quiz.js";
 import { initBeforeAfter } from "./slider.js";
 import { initTryOn } from "./tryon.js?v=6.1";
-import { initBooking } from "./booking.js";
+import { initBooking } from "./booking.js?v=2.0";
 
 // Initialize Navbar Glow Effect
 function initNavbarGlow() {
